@@ -1,32 +1,128 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    background-color: #2e0704;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header"
+        "main";
+}
+
+/* HEADER */
+header{
+    grid-area: header;
+    top: 0;
+    background-color: #2e0704;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    border-bottom: 2px solid white;
+}
+header h1{
+    color: #f16f0d;
+    font-size: 3rem;
+    text-shadow: 2px 2px 20px #f16f0d;
+}
+header img{
+    width: 100px;
+    border-radius: 50%;
+}
+header .logoicon-1{
+    transition: all 0.4s ease;
+}
+header .logoicon-1:hover{
+    transform: scale(1.1);
+}
+header .logoicon-2 {
+    transform: scaleX(-1);
+    transition: all 0.4s ease;
+}
+header .logoicon-2:hover{
+    transform: scaleX(-1) scale(1.1);
+}
+
+/* MAIN */
+main{
+    grid-area: main;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: grey;
-    font-family: Arial, sans-serif;
+    padding: 20px;
 }
-
-main {
+main .meme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
 }
-
-h1 {
-    margin-bottom: 20px;
-    color: white;
+.meme-text{
+    width: 100%;
+    max-width: 500px;
 }
-
-/* OTROS */
-
-img {
+.meme p{
+    color: #fff;
+}
+.meme-text h2{
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.meme-img {
+    width: 100%;
+    max-width: 550px;
+}
+.meme-img p {
+    margin-top: 20px;
+}
+.botoncito {
+    width: 100%;
+    height: auto;
+    display: block;
     transition: transform 0.2s ease;
 }
 
-img:hover {
+.botoncito:hover {
     transform: scale(1.05); 
     cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header img {
+        width: 60px;
+    }
+
+    main .meme {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .meme-text h2 {
+        font-size: 2rem;
+    }
+
+    .meme-img h2 {
+        margin-top: 20px;
+        font-size: 1.6rem;
+    }
 }
