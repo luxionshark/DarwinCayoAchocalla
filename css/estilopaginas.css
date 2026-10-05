@@ -199,6 +199,10 @@ aside ul{
   flex-direction: column;
   gap: 20px;
 }
+aside li{
+  display: flex;
+  justify-content: center;
+}
 aside video, aside img{
   border-radius: 20px;
   display: block;
