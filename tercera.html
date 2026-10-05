@@ -4,247 +4,212 @@
         <meta charset="UTF-8">
         <title> TERCERA </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilopaginas.css">
+        <script src="js/script.js"></script>
     </head>
     <body>
         <header>
-            <h1>PAGINA DE TABLAS</h1>
+            <a href="index.html">
+                <img src="images/logo.fox.webp" alt="icon/inicio" />
+            </a>
+            <h1>PAGINA DE LISTAS :D</h1>
+            <button id="toggle-dark" class="btn-dark-mode">🌙</button>
         </header>
         <nav>
-            <h2>ENLACES DE NAVEGACIÓN</h2>
-            <a href="index.html"><button> REGRESAR A INDEX </button></a>
-            <a href="MiPrimeraPaginaWeb.html"><button> PRIMERA PAGINA </button></a>
-            <a href="segundapagina.html"><button> SEGUNDA PAGINA </button></a>
-            <a href="tercera.html"><button> TERCERA PAGINA </button></a>
+            <ul>
+                <li><a href="index.html"> REGRESAR A INDEX </a></li>
+                <li><a href="MiPrimeraPaginaWeb.html"> PRIMERA PAGINA </a></li>
+                <li><a href="segundapagina.html"> SEGUNDA PAGINA </a></li>
+                <li><a href="tercera.html"> TERCERA PAGINA </a></li>
+            </ul>
         </nav>
         <main>
             <article>
-                <h2>EJEMPLO DE TABLA 1: DEPORTISTAS</h2>
-                <table border="1">
-                    <tr>
-                        <th>NOMBRE</th>
-                        <th>DEPORTE</th>
-                        <th>EDAD</th>
-                    </tr>
-                    <tr>
-                        <td>Alan</td>
-                        <td>Basquet</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>Margarita</td>
-                        <td>Voley</td>
-                        <td>21</td>
-                    </tr>
-                    <tr>
-                        <td>Carlos</td>
-                        <td>Fútbol</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>Diana</td>
-                        <td>Natación</td>
-                        <td>19</td>
-                    </tr>
-                    <tr>
-                        <td>Eduardo</td>
-                        <td>Tenis</td>
-                        <td>23</td>
-                    </tr>
-                    <tr>
-                        <td>Fernanda</td>
-                        <td>Atletismo</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>Gabriel</td>
-                        <td>Rugby</td>
-                        <td>24</td>
-                    </tr>
-                    <tr>
-                        <td>Héctor</td>
-                        <td>Boxeo</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>Isabel</td>
-                        <td>Patinaje</td>
-                        <td>18</td>
-                    </tr>
-                    <tr>
-                        <td>Jorge</td>
-                        <td>Ciclismo</td>
-                        <td>21</td>
-                    </tr>
-                    <tr>
-                        <td>Karla</td>
-                        <td>Gimnasia</td>
-                        <td>19</td>
-                    </tr>
-                    <tr>
-                        <td>Luis</td>
-                        <td>Béisbol</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>María</td>
-                        <td>Softbol</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>Néstor</td>
-                        <td>Waterpolo</td>
-                        <td>23</td>
-                    </tr>
-                    <tr>
-                        <td>Olga</td>
-                        <td>Karate</td>
-                        <td>21</td>
-                    </tr>
-                    <tr>
-                        <td>Pedro</td>
-                        <td>Handball</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>Quintín</td>
-                        <td>Ajedrez</td>
-                        <td>26</td>
-                    </tr>
-                    <tr>
-                        <td>Rocío</td>
-                        <td>Surf</td>
-                        <td>19</td>
-                    </tr>
-                    <tr>
-                        <td>Sergio</td>
-                        <td>Paddle</td>
-                        <td>24</td>
-                    </tr>
-                    <tr>
-                        <td>Tatiana</td>
-                        <td>Hockey</td>
-                        <td>20</td>
-                    </tr>
-                </table>
 
-                <br><br>
+                <style>
+            .contenedor {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 30px;
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .tablas {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                background-color: #1e0a05;
+                border: 2px solid #e0531c;
+                border-radius: 15px;
+                box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.7);
+                width: 100%;
+                max-width: 420px;
+                min-height: 300px;
+                padding: 20px;
+                box-sizing: border-box;
+                transition: all 0.4s ease;
+            }
 
-                <h2>EJEMPLO DE TABLA 2: CURSOS Y HORARIOS</h2>
-                <table border="1">
-                    <tr>
-                        <th>CURSO</th>
-                        <th>DÍA</th>
-                        <th>HORA</th>
-                    </tr>
-                    <tr>
-                        <td>HTML5 Básico</td>
-                        <td>Lunes</td>
-                        <td>08:00</td>
-                    </tr>
-                    <tr>
-                        <td>CSS3 Estilos</td>
-                        <td>Martes</td>
-                        <td>09:00</td>
-                    </tr>
-                    <tr>
-                        <td>JavaScript</td>
-                        <td>Miércoles</td>
-                        <td>10:00</td>
-                    </tr>
-                    <tr>
-                        <td>Diseño UI</td>
-                        <td>Jueves</td>
-                        <td>11:00</td>
-                    </tr>
-                    <tr>
-                        <td>Experiencia UX</td>
-                        <td>Viernes</td>
-                        <td>14:00</td>
-                    </tr>
-                    <tr>
-                        <td>Bases de Datos</td>
-                        <td>Lunes</td>
-                        <td>15:00</td>
-                    </tr>
-                    <tr>
-                        <td>Git y GitHub</td>
-                        <td>Martes</td>
-                        <td>16:00</td>
-                    </tr>
-                    <tr>
-                        <td>Maquetación Web</td>
-                        <td>Miércoles</td>
-                        <td>08:00</td>
-                    </tr>
-                    <tr>
-                        <td>Optimización SEO</td>
-                        <td>Jueves</td>
-                        <td>09:00</td>
-                    </tr>
-                    <tr>
-                        <td>Flexbox Layout</td>
-                        <td>Viernes</td>
-                        <td>10:00</td>
-                    </tr>
-                    <tr>
-                        <td>CSS Grid</td>
-                        <td>Lunes</td>
-                        <td>11:00</td>
-                    </tr>
-                    <tr>
-                        <td>Animaciones Web</td>
-                        <td>Martes</td>
-                        <td>14:00</td>
-                    </tr>
-                    <tr>
-                        <td>Estructura Semántica</td>
-                        <td>Miércoles</td>
-                        <td>15:00</td>
-                    </tr>
-                    <tr>
-                        <td>Accesibilidad Web</td>
-                        <td>Jueves</td>
-                        <td>16:00</td>
-                    </tr>
-                    <tr>
-                        <td>Prototipado rápido</td>
-                        <td>Viernes</td>
-                        <td>08:00</td>
-                    </tr>
-                    <tr>
-                        <td>Diseño Responsivo</td>
-                        <td>Lunes</td>
-                        <td>09:00</td>
-                    </tr>
-                    <tr>
-                        td>Frameworks CSS</td>
-                        <td>Martes</td>
-                        <td>10:00</td>
-                    </tr>
-                    <tr>
-                        <td>Lógica de Programación</td>
-                        <td>Miércoles</td>
-                        <td>11:00</td>
-                    </tr>
-                    <tr>
-                        <td>Control de Versiones</td>
-                        <td>Jueves</td>
-                        <td>14:00</td>
-                    </tr>
-                    <tr>
-                        <td>Proyecto Final</td>
-                        <td>Viernes</td>
-                        <td>15:00</td>
-                    </tr>
-                </table>
+            .tablas h2 {
+                color: #e0531c;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                font-size: 1.2rem;
+                margin-top: 0;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                background-color: #120502;
+                font-family: Arial, sans-serif;
+            }
+
+            th {
+                color: #e0531c;
+                background-color: #2e0704;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                border-bottom: 2px solid #e0531c;
+            }
+
+            td {
+                color: #ffffff;
+            }
+
+            td, th {
+                padding: 8px 12px;
+                text-align: left;
+                border: 1px solid #4a1a0f;
+            }
+            tr:nth-child(even) {
+                background-color: #1a0805;
+            }
+            .tablas:hover {
+                transform: scale(1.02);
+                box-shadow: 0px 4px 30px rgba(224, 83, 28, 0.4);
+            }
+
+            /* RESPONSIVE */
+            @media (max-width: 900px) {
+                .tablas {
+                    max-width: 100%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .contenedor {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px;
+                    gap: 20px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .contenedor {
+                    padding: 5px;
+                    gap: 15px;
+                }
+                td, th {
+                    padding: 6px 8px;
+                    font-size: 0.8rem;
+                }
+            }
+        </style>
+                
+                <div class="contenedor">
+                    <div class="tablas">
+                    <h2>EJEMPLO DE TABLA 1: <br>DEPORTISTAS</h2>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>NOMBRE</th>
+                                    <th>DEPORTE</th>
+                                    <th>EDAD</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Alan</td><td>Basquet</td><td>20</td></tr>
+                                <tr><td>Margarita</td><td>Voley</td><td>21</td></tr>
+                                <tr><td>Carlos</td><td>Fútbol</td><td>22</td></tr>
+                                <tr><td>Diana</td><td>Natación</td><td>19</td></tr>
+                                <tr><td>Eduardo</td><td>Tenis</td><td>23</td></tr>
+                                <tr><td>Fernanda</td><td>Atletismo</td><td>20</td></tr>
+                                <tr><td>Gabriel</td><td>Rugby</td><td>24</td></tr>
+                                <tr><td>Héctor</td><td>Boxeo</td><td>25</td></tr>
+                                <tr><td>Isabel</td><td>Patinaje</td><td>18</td></tr>
+                                <tr><td>Jorge</td><td>Ciclismo</td><td>21</td></tr>
+                                <tr><td>Karla</td><td>Gimnasia</td><td>19</td></tr>
+                                <tr><td>Luis</td><td>Béisbol</td><td>22</td></tr>
+                                <tr><td>María</td><td>Softbol</td><td>20</td></tr>
+                                <tr><td>Néstor</td><td>Waterpolo</td><td>23</td></tr>
+                                <tr><td>Olga</td><td>Karate</td><td>21</td></tr>
+                                <tr><td>Pedro</td><td>Handball</td><td>22</td></tr>
+                                <tr><td>Quintín</td><td>Ajedrez</td><td>26</td></tr>
+                                <tr><td>Rocío</td><td>Surf</td><td>19</td></tr>
+                                <tr><td>Sergio</td><td>Paddle</td><td>24</td></tr>
+                                <tr><td>Tatiana</td><td>Hockey</td><td>20</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tablas">
+                    <h2>EJEMPLO DE TABLA 2: <br>CURSOS Y HORARIOS</h2>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>CURSO</th>
+                                    <th>DÍA</th>
+                                    <th>HORA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>HTML5 Básico</td><td>Lunes</td><td>18:00</td></tr>
+                                <tr><td>CSS3 Básico</td><td>Martes</td><td>19:00</td></tr>
+                                <tr><td>JavaScript</td><td>Miércoles</td><td>18:00</td></tr>
+                                <tr><td>Bootstrap 5</td><td>Jueves</td><td>17:00</td></tr>
+                                <tr><td>Git y GitHub</td><td>Viernes</td><td>16:00</td></tr>
+                                <tr><td>Node.js</td><td>Lunes</td><td>19:30</td></tr>
+                                <tr><td>Express</td><td>Martes</td><td>20:00</td></tr>
+                                <tr><td>MongoDB</td><td>Miércoles</td><td>19:00</td></tr>
+                                <tr><td>React JS</td><td>Jueves</td><td>18:30</td></tr>
+                                <tr><td>SQL Server</td><td>Viernes</td><td>17:30</td></tr>
+                                <tr><td>Python Core</td><td>Lunes</td><td>15:00</td></tr>
+                                <tr><td>Django Web</td><td>Martes</td><td>16:15</td></tr>
+                                <tr><td>UI/UX Design</td><td>Miércoles</td><td>14:00</td></tr>
+                                <tr><td>Figma Advanced</td><td>Jueves</td><td>15:30</td></tr>
+                                <tr><td>Scrum Master</td><td>Viernes</td><td>11:00</td></tr>
+                                <tr><td>Cybersecurity</td><td>Lunes</td><td>10:00</td></tr>
+                                <tr><td>Linux Admin</td><td>Martes</td><td>11:30</td></tr>
+                                <tr><td>AWS Cloud</td><td>Miércoles</td><td>12:00</td></tr>
+                                <tr><td>Docker & Containers</td><td>Jueves</td><td>13:00</td></tr>
+                                <tr><td>Proyecto Final</td><td>Viernes</td><td>14:00</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </article>
 
             <aside>
-                <a href="segundapagina.html"> <h3><img src="images/images.png" alt="" width="50"></h3></a>
+                <ul>
+                    <li><img src="images/gato-like.jpg" alt=""></li>
+                    <li><p>Si lees esto, que tengas un buen dia :D</p></li>
+                </ul>
             </aside>
         </main>
         <footer>
-            
+            <h4>Enlaces de Interes</h4>
+            <ul>
+                <li><a href="https://blackboard.com" target="_blank">Blackboard</a></li>
+                <li><a href="https://github.com/luxionshark/DarwinCayoAchocalla" target="_blank">Mi Repositorio</a></li>
+            </ul>
         </footer>
     </body>
 </html>
