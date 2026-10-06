@@ -58,7 +58,7 @@ header {
             rgba(0, 35, 18, 0.55),
             rgba(0, 35, 18, 0.55)
         ),
-        url('images/img-principal.1.jpg');
+        url(../images/img-principal.1.jpg);
 
     background-position: center;
     background-size: cover;
@@ -408,7 +408,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 25px 20px;
-    width: 75%;
+    width: 60%;
     gap: 20px;
 }
 .contenedor-ubi img{
@@ -424,6 +424,7 @@ nav {
 }
 .ubi-link-info li{
     color: #ffffff;
+    list-style: none;
 }
 
 
