@@ -58,7 +58,7 @@ header {
             rgba(0, 35, 18, 0.55),
             rgba(0, 35, 18, 0.55)
         ),
-        url('img/img-principal.1.jpg');
+        url('images/img-principal.1.jpg');
 
     background-position: center;
     background-size: cover;
@@ -235,7 +235,7 @@ nav {
 .contenedor-imag{
     display: flex;
     width: 90%;
-    height: 400px;
+    height: 700px;
 }
 .contenedor-imag img{
     width: 0;
