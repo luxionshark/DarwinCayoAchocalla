@@ -15,7 +15,34 @@
     </head>
     <body>
 
-        
+        <!-- BOTON FLOTANTE -->
+        <style>
+            .boton-flotante {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                padding: 15px 25px;
+                background-color: #000000;
+                color: #ff007f;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 16px;
+                border: 2px solid #ff007f;
+                border-radius: 50px;
+                box-shadow: 0 0 10px #ff007f;
+                transition: all 0.3s ease;
+                z-index: 9999;
+            }
+            .boton-flotante:hover {
+                background-color: #ff007f;
+                color: #000000;
+                box-shadow: 0 0 20px #ff007f, 0 0 40px #ff007f;
+                transform: translateY(-5px);
+            }
+        </style>
+
+        <a href="../../index.html" class="boton-flotante">Inicio 🏠</a>
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
