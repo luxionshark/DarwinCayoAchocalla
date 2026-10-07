@@ -248,9 +248,8 @@ nav {
     width: 0;
     flex-grow: 1;
     object-fit: cover;
-
     opacity: .8;
-    transition: .5s ease;
+    transition: all .5s ease;
 }
 .contenedor-imag img:hover{
     cursor: crosshair;
