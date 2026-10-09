@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title> LISTAS </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilopaginas.css">
+    </head>
+    <body>
+        <header>
+            <img class="logoicon-1" src="../INDEX/images/logo.fox.webp" alt="logo">
+                <H1>PAGINA DE LISTAS :D</H1>
+            <img class="logoicon-2" src="../INDEX/images/logo.fox.webp" alt="logo">
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="MiPrimeraPaginaWeb.html">TAREA 1: VIDEOS</a></li>
+                <li><a href="segundapagina.html">TAREA 1: LISTAS</a></li>
+                <li><a href="tercera.html">TAREA 1: TABLAS</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <article>
+
+                <style>
+                    .contenedor{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: flex-start;
+                        flex-wrap: wrap;
+                        gap: 25px;
+                        width: 100%;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        }
+                    .listas{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        border: 2px solid black;
+                        border-radius: 15px;
+                        box-shadow: 2px 2px 20px black;
+                        width: 350px; min-height: 300px;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        transition: all 0.4s ease;
+                    }
+                    article .listas:hover{
+                        transform: scale(1.05);
+                    }
+                    article ul, article ol {
+                        margin: 10px 5px;
+                        padding-left: 20px;
+                        text-align: left;
+                    }
+                    @media (max-width: 768px) {
+                        .contenedor{
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 10px;
+                            gap: 20px;
+                        }
+                        .listas{
+                            width: 100%;
+                            max-width: 500px;
+                            min-height: auto;
+                        }
+                    }
+                    @media (max-width: 480px){
+                        .contenedor{
+                            padding: 5px;
+                            gap: 15px;
+                        }
+                        .listas{
+                            width: 100%;
+                            padding: 15px;
+                        }
+                    }
+                </style>
+
+                <h2>LISTA ORDENADA</h2>
+                <div class="contenedor">
+                    <div class="listas">
+                        <h3>Top 10 Jugadores de Fútbol Históricos</h3>
+                    <ol>
+                        <li>Lionel Messi</li>
+                        <li>Diego Maradona</li>
+                        <li>Pelé</li>
+                        <li>Cristiano Ronaldo</li>
+                        <li>Johan Cruyff</li>
+                        <li>Zinedine Zidane</li>
+                        <li>Ronaldo Nazário</li>
+                        <li>Franz Beckenbauer</li>
+                        <li>Ronaldinho Gaúcho</li>
+                        <li>Ricardo KAKA</li>
+                    </ol>
+                    </div>
+                    <div class="listas">
+                        <h3>Pasos de mi Rutina Diaria</h3>
+                        <ol>
+                            <li>Despertar y levantarme</li>
+                            <li>Tomar un vaso de agua</li>
+                            <li>Hacer mi cama</li>
+                            <li>Bañarme y cambiarme</li>
+                            <li>Tomar un buen desayuno</li>
+                            <li>Cepillarme los dientes</li>
+                            <li>Estudiar o trabajar</li>
+                            <li>Almorzar a mi hora</li>
+                            <li>Hacer un poco de ejercicio</li>
+                            <li>Cenar y descansar</li>
+                        </ol>
+                    </div>
+                </div> 
+            </article>
+            <article>
+                <h2>LISTA DESORDENADA</h2>
+                <div class="contenedor">
+                    <div class="listas">
+                        <h3>10 Pokémon Icónicos de Kanto</h3>
+                        <ul>
+                            <li>Pikachu</li>
+                            <li>Charizard</li>
+                            <li>Bulbasaur</li>
+                            <li>Squirtle</li>
+                            <li>Mewtwo</li>
+                            <li>Gengar</li>
+                            <li>Eevee</li>
+                            <li>Snorlax</li>
+                            <li>Dragonite</li>
+                            <li>Lucario</li>
+                        </ul>
+                    </div>
+                    <div class="listas">
+                        <h3>Lista de Útiles Escolares</h3>
+                        <ul>
+                            <li>Cuaderno</li>
+                            <li>Lápiz</li>
+                            <li>Borrador</li>
+                            <li>Tajador</li>
+                            <li>Regla</li>
+                            <li>Colores</li>
+                            <li>Tijeras</li>
+                            <li>Goma</li>
+                            <li>Plumones</li>
+                            <li>Mochila</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <aside>
+            <ul>
+                <li><img src="images/gato-like.jpg" alt=""></li>
+                <li><p>Si lees esto, que tengas un buen dia :D</p></li>
+            </ul>
+        </aside>
+        <footer>
+            <h4>Enlaces de Interes</h4>
+            <ul>
+                <li><a href="https://blackboard.com" target="_blank">Blackboard</a></li>
+                <li><a href="https://github.com/luxionshark/DarwinCayoAchocalla" target="_blank">Mi Repositorio</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
