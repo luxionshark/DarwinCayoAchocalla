@@ -1,8 +1,8 @@
 function cambiarLogo() {
   let logo = document.getElementById("logo");
   
-  let imagenOriginal = "https://i.ibb.co/27DqrbGq/alya.webp";
-  let imagenNueva = "https://i.ibb.co/FLwhK4PK/alya-2.webp";
+  let imagenOriginal = "images/alya.webp";
+  let imagenNueva = "images/alya-2.webp";
   if (!logo.src.endsWith(imagenNueva)) {
     logo.src = imagenNueva;
   } else {
