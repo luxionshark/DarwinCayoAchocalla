@@ -123,6 +123,10 @@ nav a:hover {
   background-color: var(--naranja-medio);
   transform: scale(1.08);
 }
+nav a.activo{
+  background-color: #f72d01;
+  color: var(--texto-blanco);
+}
 
 /* CONTENIDO PRINCIPAL */
 main {
