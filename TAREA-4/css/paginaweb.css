@@ -1,0 +1,473 @@
+/* EDUCATECH: estilos sencillos con Flexbox y colores institucionales oscuros. */
+:root {
+    --fondo: #15191d;
+    --fondo-secundario: #1e252a;
+    --tarjeta: #252e34;
+    --texto: #d9dfdf;
+    --texto-suave: #b2bbbe;
+    --acento: #8fa9b8;
+    --acento-claro: #b6c5cc;
+    --borde: #3b474e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+a { color: var(--acento-claro); text-decoration: none; }
+a:hover { color: #d0dadd; }
+
+/* Banner de cabecera: archivo sugerido 1920x900px. */
+.encabezado {
+    height: 900px;
+    background-image: linear-gradient(rgba(15, 19, 22, .76), rgba(15, 19, 22, .90)), url("https://images.unsplash.com/photo-1620496009285-ac853df7b9b6?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5zdGl0dXRvfGVufDB8fDB8fHww");
+    background-position: center;
+    background-size: cover;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 18px 5%;
+    background: rgba(21, 25, 29, .94);
+    border-bottom: 1px solid var(--borde);
+}
+.logo, .logo-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+.logo-2 img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transform: scaleX(-1);
+}
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 22px;
+    list-style: none;
+}
+.nav-links a { 
+    display: block;
+    padding: 8px 0;
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: bold;
+}
+.nav-links a:hover {
+    color: var(--acento-claro);
+}
+.info {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 540px;
+    margin: 0 auto;
+    padding: 55px 28px;
+}
+.texto-header {
+    max-width: 720px;
+}
+.subtitulo-header {
+    margin-bottom: 12px;
+    color: var(--acento);
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+.texto-header h1 { 
+    margin-bottom: 18px;
+    color: #d9dfdf;
+    font-size: clamp(48px, 8vw, 88px);
+    line-height: 1.1;
+}
+.texto-header p { 
+    margin-bottom: 22px;
+    color: var(--texto-suave);
+    font-size: 18px;
+}
+.boton-header, .boton-enviar {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid var(--acento);
+    border-radius: 6px;
+    background: var(--acento);
+    color: #20272b;
+    font-weight: bold;
+    cursor: pointer;
+}
+.boton-header:hover, .boton-enviar:hover {
+    background: var(--acento-claro);
+    color: #20272b;
+}
+
+/* Secciones principales. */
+section {
+    padding: 65px 5%;
+}
+section h2 {
+    margin-bottom: 30px;
+    color: var(--acento-claro);
+    font-size: clamp(26px, 4vw, 38px);
+    text-align: center;
+}
+
+/* Galería */
+#galeria-imag{
+    justify-items: center;
+    padding: 100px 2px;
+}
+.contenedor-imag{
+    display: flex;
+    width: 90%;
+    height: 700px;
+    gap: 5px;
+}
+.contenedor-imag img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: all .5s ease;
+}
+.contenedor-imag img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%) saturate(110%);
+}
+/* Misión, visión e historia. */
+#nosotros { 
+    background: var(--fondo); 
+    text-align: center; 
+}
+
+.contenedor-nosotros { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: stretch; 
+    gap: 22px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.misio { 
+    flex: 1 1 280px; 
+    padding: 28px; 
+    border: 1px solid var(--borde); 
+    border-radius: 10px; 
+    background: var(--tarjeta); 
+    text-align: center; 
+}
+
+.misio h3 { 
+    margin-bottom: 14px; 
+    color: var(--acento-claro); 
+    font-size: 24px; 
+}
+
+.misio p { 
+    color: var(--texto-suave); 
+    font-size: 16px; 
+}
+
+/* Nueve carreras  */
+#nuestras-carreras { 
+    background: var(--fondo-secundario); 
+}
+
+.contenedor-carreras { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.carreras { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 22px; 
+}
+
+.cartas { 
+    display: flex; 
+    flex: 1 1 300px; 
+    flex-direction: column; 
+    max-width: 380px; 
+    overflow: hidden; 
+    border: 1px solid var(--borde); 
+    border-radius: 9px; 
+    background: var(--tarjeta); 
+}
+
+.cartas > img { 
+    width: 800px; 
+    height: 190px; 
+    object-fit: cover; 
+}
+
+.cartas-info { 
+    display: flex; 
+    flex: 1; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 12px; 
+    padding: 22px; 
+}
+
+.cartas-info h3 { 
+    color: var(--acento-claro); 
+    font-size: 20px; 
+}
+
+.cartas-info .descripcion { 
+    flex: 1; 
+    color: var(--texto-suave); 
+}
+
+.cartas-info button { 
+    padding: 9px 15px; 
+    border: 1px solid var(--acento); 
+    border-radius: 5px; 
+    background: transparent; 
+    color: var(--acento-claro); 
+    cursor: pointer; 
+}
+
+.cartas-info button:hover { 
+    background: var(--acento); 
+    color: #20272b; 
+}
+
+/* Formulario de inscripción */
+#inscripcion { 
+    background: var(--fondo); 
+}
+
+.texto-formulario { 
+    max-width: 720px; 
+    margin: -12px auto 25px; 
+    color: var(--texto-suave); 
+    text-align: center; 
+}
+
+.formulario { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 28px; 
+    border: 1px solid var(--borde); 
+    border-radius: 10px; 
+    background: var(--tarjeta); 
+}
+
+.campos-formulario { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 18px; 
+}
+
+.campo-formulario { 
+    display: flex; 
+    flex: 1 1 calc(50% - 18px); 
+    flex-direction: column; 
+    gap: 7px; 
+    min-width: 220px; 
+}
+
+.campo-completo { 
+    flex-basis: 100%; 
+}
+
+.campo-formulario label { 
+    color: var(--texto); 
+    font-weight: bold; 
+}
+
+.campo-formulario input, .campo-formulario select, .campo-formulario textarea { 
+    width: 100%; 
+    min-height: 42px; 
+    padding: 10px 12px; 
+    border: 1px solid #4a5961; 
+    border-radius: 5px; 
+    background: #1a2024; 
+    color: var(--texto); 
+    font: inherit; 
+}
+
+.campo-formulario textarea { 
+    min-height: 110px; 
+    resize: vertical; 
+}
+
+.campo-formulario input:focus, .campo-formulario select:focus, .campo-formulario textarea:focus { 
+    outline: 2px solid var(--acento); 
+}
+
+.aviso-formulario { 
+    margin: 18px 0; 
+    color: var(--texto-suave); 
+    font-size: 14px; 
+}
+
+/* Contactos. */
+#contactos { 
+    background: var(--fondo-secundario); 
+}
+
+.contenedor-contactos { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 18px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.contacto-card { 
+    flex: 1 1 210px; 
+    padding: 24px 16px; 
+    border: 1px solid var(--borde); 
+    border-radius: 9px; 
+    background: var(--tarjeta); 
+    text-align: center; 
+}
+
+.contacto-card h3 { 
+    margin-bottom: 10px; 
+    color: var(--acento-claro); 
+    font-size: 20px; 
+}
+
+.contacto-card p { 
+    color: var(--texto-suave); 
+    overflow-wrap: anywhere; 
+}
+
+/* Ubicación */
+#ubicacion { 
+    background: var(--fondo); 
+}
+
+.contenedor-ubi { 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+.contenedor-ubi > img { 
+    flex: 1 1 50%; 
+    width: 600px; 
+    height: 400px; 
+    object-fit: cover; 
+    border: 1px solid var(--borde); 
+    border-radius: 8px; 
+}
+
+.ubi-info { 
+    flex: 1 1 50%; 
+}
+
+.ubi-info p, .ubi-link-info li { 
+    margin-bottom: 14px; 
+    color: var(--texto-suave); 
+}
+
+.ubi-link-info { 
+    padding-left: 22px; 
+}
+
+/* Footer */
+footer { 
+    padding: 25px 5%; 
+    border-top: 1px solid var(--borde); 
+    background: #111519; 
+    text-align: center; 
+}
+
+.footer-content p { 
+    color: var(--texto-suave); 
+    font-size: 14px; 
+}
+
+
+@media (max-width: 700px) {
+    nav { 
+        justify-content: center; 
+    }
+    
+    .logo-2 { 
+        display: none; 
+    }
+    
+    .nav-links { 
+        gap: 6px 14px; 
+    }
+    
+    .info { 
+        min-height: 470px; 
+        padding: 45px 22px; 
+    }
+    
+    section { 
+        padding: 48px 18px; 
+    }
+    
+    .contenedor-imag { 
+        flex-wrap: wrap; 
+        height: auto; 
+    }
+    
+    .contenedor-imag img { 
+        flex: 1 1 40%; 
+        width: 400px; 
+        height: 150px; 
+    }
+    
+    .contenedor-imag img:last-child { 
+        flex-basis: 100%; 
+        width: 400px; 
+        height: 150px; 
+    }
+    
+    .cartas { 
+        flex-basis: 100%; 
+    }
+    
+    .cartas > img { 
+        width: 800px; 
+        height: 180px; 
+    }
+    
+    .formulario { 
+        padding: 18px; 
+    }
+    
+    .campo-formulario { 
+        flex-basis: 100%; 
+        min-width: 0; 
+    }
+    
+    .contenedor-ubi { 
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+    
+    .contenedor-ubi > img { 
+        width: 600px; 
+        height: 260px; 
+    }
+}

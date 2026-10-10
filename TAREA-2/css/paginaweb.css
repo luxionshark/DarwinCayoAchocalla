@@ -97,7 +97,7 @@ nav {
 }
 .logo-2 {
     transform: scaleX(-1);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .logo-2:hover{
     transform: scaleX(-1) scale(1.1);
@@ -115,7 +115,6 @@ nav {
     letter-spacing: 0.5px;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
-
     transition: all 0.3s ease;
 }
 .nav-links a:hover {
