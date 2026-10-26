@@ -1,9 +1,10 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Michroma", sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Michroma", sans-serif;
 }
+
 /*
 ------------
 |  HEADER  |
@@ -24,7 +25,7 @@
 .logo{
   color: #fff;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.rem;
   text-decoration: none;
 }
 .nav-links{
@@ -34,6 +35,7 @@
   transition: all 0.3s ease;
 }
 .nav-links a {
+  display: inline-block; /* Cambio 3: Permite que transform funcione correctamente */
   color: #fff;
   text-decoration: none;
   font-weight: 500;
@@ -61,7 +63,7 @@
   background-image: url(img/wall-01.jpg);
   background-size: cover;
   width: 100%;
-  min-height: 900px;
+  min-height: 700px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -70,14 +72,14 @@
 .titulo{
   color: #ffffff;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 15px;
   width: fit-content;
   margin: 0 auto;
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: 2px;
   text-shadow: 2px 2px 20px #ffffff;
   position: relative;
-  display: inline-block;
+  display: block; /* Cambio 1: Corregido de inline-block a block para centrar correctamente */
 }
 .titulo::after{
   content: "";
@@ -91,9 +93,10 @@
   animation: moving 5s ease-in-out infinite;
 }
 @keyframes moving{
-  0% { width: 0%; }
-  50% { width: 100%; }
-  100% { width: 0%; }
+  0% { width: 0%; left: 0; right: auto; }
+  50% { width: 100%; left: 0; right: auto; }
+  50.1% { left: auto; right: 0; width: 100%; }
+  100% { width: 0%; left: auto; right: 0; } /* Cambio 2: Animación corregida para evitar el efecto 'rebote elástico' */
 }
 
 .contenedor-imagen {
@@ -125,6 +128,7 @@
     padding: 1rem;
     clip-path: circle(0px at 90% -10%);
     pointer-events: none;
+    z-index: 999; /* Cambio 4: Evita que el contenido de abajo tape el menú móvil */
   }
   .nav-links.active {
     clip-path: circle(1000px at 90% -10%);
