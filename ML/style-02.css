@@ -4,7 +4,11 @@
     box-sizing: border-box;
     font-family: "Michroma", sans-serif;
 }
-
+/*
+------------
+|  HEADER  |
+------------
+*/
 .navegacion{
   background-color: #010326;
   padding: 1rem 2rem;
@@ -85,36 +89,16 @@
 -------------------
 |  CONTENEDOR 01  |
 -------------------
-
+*/
 .cont-1{
   background-image: url(img/wall-01.jpg);
   background-size: cover;
   width: 100%;
-  min-height: 960px;
+  min-height: 900px;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-.navegacion{
-    position: fixed;
-    width: 100%;
-    color: #ffffff;
-    background-color: #010326;
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 20px;
-    border-radius: 0px 0px 20px 20px;
-    z-index: 999;
-}
-.icons{
-  display: flex;
-  gap: 20px;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
 }
 .titulo{
   color: #ffffff;
@@ -156,4 +140,3 @@
   height: auto;
   filter: saturate(200%);
 }
-*/
